@@ -396,6 +396,7 @@ _tiffStreamOpen(const char* name, const char* mode, void *fd)
 
 } /* extern "C" */
 
+__declspec(dllexport)
 TIFF*
 TIFFStreamOpen(const char* name, ostream *os)
 {
@@ -412,6 +413,7 @@ TIFFStreamOpen(const char* name, ostream *os)
 	return _tiffStreamOpen(name, "wm", os);
 }
 
+__declspec(dllexport)
 TIFF*
 TIFFStreamOpen(const char* name, istream *is)
 {
